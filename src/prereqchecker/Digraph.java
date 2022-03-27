@@ -100,9 +100,10 @@ public class Digraph {
             for (String course : eligible) {
                 if (needToTake.contains(course)) {
                     sem.add(course);
-                    needToTake.remove(course);
+                    // needToTake.remove(course);
                 }
             }
+            needToTake.removeAll(sem);
             completedCourses.addAll(sem);
             plan.add(sem);
         }
